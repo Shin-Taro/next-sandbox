@@ -30,17 +30,6 @@ RUN apt-get update \
 RUN yarn install --fronzen-lockfile
 
 #
-# development usage
-#
-FROM --platform=linux/amd64 node:18.17.1-bullseye-slim AS dev
-
-WORKDIR /app
-COPY --from=installer /app/node_modules ./node_modules
-COPY . .
-
-CMD ["yarn", "dev"]
-
-#
 # Rebuild the source code only when needed
 #
 FROM --platform=linux/amd64 node:18.17.1-bullseye-slim AS builder
