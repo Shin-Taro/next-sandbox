@@ -6,6 +6,7 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
+    "prepare": "panda codegen",
     "check-code": "run-p type-check lint",
     "type-check": "tsc --noEmit",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings 0 --cache",
@@ -19,6 +20,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.27.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
