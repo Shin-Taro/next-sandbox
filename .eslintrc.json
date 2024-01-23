@@ -16,7 +16,16 @@
     "plugin:tailwindcss/recommended",
     "prettier"
   ],
+  "plugins": ["import-access"],
   "rules": {
+    // import-accessに関するルール
+    "import-access/jsdoc": [
+      "error",
+      {
+        "defaultImportability": "package",
+        "treatSelfReferenceAs": "internal"
+      }
+    ],
     // anyに関するルール
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
