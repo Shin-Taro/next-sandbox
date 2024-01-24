@@ -3,12 +3,22 @@ import { defineConfig } from "@pandacss/dev"
 
 export default defineConfig({
   preflight: true,
-
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
-
   exclude: [],
-
+  outdir: "styled-system",
   emitPackage: true,
+  importMap: {
+    css: "styled-system/css",
+    recipes: "styled-system/recipes",
+    patterns: "styled-system/patterns",
+    jsx: "styled-system/jsx",
+  },
+
+  globalCss: {
+    "*": {
+      boxSizing: "border-box",
+    },
+  },
 
   theme: {
     extend: {
