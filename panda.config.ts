@@ -1,4 +1,6 @@
-import { keyframes } from "@/shared/styles/keyframes"
+import { globalCss } from "@/styles/global"
+import { keyframes } from "@/styles/keyframes"
+import { tokens } from "@/styles/tokens"
 import { defineConfig } from "@pandacss/dev"
 
 export default defineConfig({
@@ -14,24 +16,12 @@ export default defineConfig({
     jsx: "styled-system/jsx",
   },
 
-  globalCss: {
-    "*": {
-      boxSizing: "border-box",
-    },
-  },
-
+  // project design customization
+  globalCss,
   theme: {
     extend: {
-      keyframes: {
-        ...keyframes,
-      },
+      keyframes,
     },
-
-    tokens: {
-      colors: {
-        white: { value: "#FFFFFF" },
-        overlay: { value: "rgba(0, 0, 0, 0.5)" },
-      },
-    },
+    tokens,
   },
 })
