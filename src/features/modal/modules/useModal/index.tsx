@@ -17,6 +17,8 @@ type Parameters = {
 type UseModal = (parameters?: Parameters) => ReturnValue
 
 /**
+ * @public
+ *
  * @param parameters -
  *  portalTarget - createPortalに渡すための構造上の親要素、defaultは#__next
  *
