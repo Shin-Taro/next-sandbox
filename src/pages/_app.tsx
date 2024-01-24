@@ -1,4 +1,4 @@
-import { Header } from "@/components/layouts/Header"
+import { Header } from "@/shared/components/layouts/Header"
 import "@/styles/globals.css"
 import type { AppProps } from "next/app"
 import { Inter } from "next/font/google"

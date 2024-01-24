@@ -1,10 +1,7 @@
 import { createPortal } from "react-dom"
 
-import { useElement } from "./modules/useElement"
-import { useHandleEscapeKey } from "./modules/useHandleEscapeKey"
-import { useToggleScrollable } from "./modules/useToggleScrollable"
-
-import type { FcWithChildren } from "../../../../types/react"
+import { useElement, useHandleEscapeKey, useToggleScrollable } from "./modules"
+import { FcWithChildren } from "@/types/FcWithChildren"
 
 type Props = {
   isOpen: boolean
@@ -14,13 +11,7 @@ type Props = {
 }
 
 export const Modal: FcWithChildren<Props> = (props) => {
-  const {
-    isOpen,
-    handleCloseModal,
-    portalTarget,
-    backgroundScrollArea,
-    children,
-  } = props
+  const { isOpen, handleCloseModal, portalTarget, backgroundScrollArea, children } = props
 
   useHandleEscapeKey(handleCloseModal)
 

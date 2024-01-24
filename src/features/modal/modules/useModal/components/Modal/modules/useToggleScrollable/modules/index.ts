@@ -1,0 +1,1 @@
+export { toggleScrollable } from "./toggleScrollable"

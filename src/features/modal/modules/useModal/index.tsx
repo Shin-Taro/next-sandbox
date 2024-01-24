@@ -1,8 +1,7 @@
 import { useState } from "react"
 
-import { Modal } from "./components/Modal"
-
-import type { FcWithChildren } from "../../types/react"
+import { Modal } from "./components"
+import { FcWithChildren } from "@/types/FcWithChildren"
 
 type ReturnValue = {
   ModalWrapper: FcWithChildren
@@ -47,9 +46,7 @@ export const useModal: UseModal = (parameters = {}) => {
     portalTarget,
   }
 
-  const ModalWrapper: FcWithChildren = ({ children }) => (
-    <Modal {...ModalProps}>{children}</Modal>
-  )
+  const ModalWrapper: FcWithChildren = ({ children }) => <Modal {...ModalProps}>{children}</Modal>
 
   return { ModalWrapper, handleCloseModal, handleOpenModal }
 }

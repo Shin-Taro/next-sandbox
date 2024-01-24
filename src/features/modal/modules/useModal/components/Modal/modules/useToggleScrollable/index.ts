@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 
-import { toggleScrollable } from "./modules/toggleScrollable"
+import { toggleScrollable } from "./modules"
 
 type UseToggleScrollable = (
   isScrollable: boolean,
