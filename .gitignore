@@ -39,7 +39,7 @@ next-env.d.ts
 /.vscode**
 
 # cache
-.eslintcache
+.*cache
 
 ## Panda
 styled-system
