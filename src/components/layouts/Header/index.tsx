@@ -1,10 +1,11 @@
 import { FC } from "react"
+import { Root } from "./StyledComponents"
 
 /**
  * @public
  */
 export const Header: FC = () => (
-  <header className="bg-sky-400 py-5 text-center text-first">
+  <Root>
     <h1>Header</h1>
-  </header>
+  </Root>
 )
