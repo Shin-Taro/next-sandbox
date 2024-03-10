@@ -3,6 +3,7 @@ import { Header } from "@/components/layouts/Header"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ReactNode } from "react"
+import { StyledComponentsRegistry } from "@/lib/styled-components/StyledComponentsRegistry"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -16,7 +17,9 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main className="mx-auto mt-[60px] w-[90%] text-third">{children}</main>
+        <StyledComponentsRegistry>
+          <main className="mx-auto mt-[60px] w-[90%] text-third">{children}</main>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
