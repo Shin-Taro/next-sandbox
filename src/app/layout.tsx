@@ -1,5 +1,5 @@
 import "@/styles/globals.css"
-import { Header } from "@/components/layouts/Header"
+import { Header } from "@/app/_components/Header"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ReactNode } from "react"

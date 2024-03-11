@@ -1,5 +1,7 @@
+import { Template } from "./_components"
+
 const Home = () => {
-  return <main>main</main>
+  return <Template />
 }
 
 export default Home
